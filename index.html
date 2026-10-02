@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abanob Reda | Network and Cloud Engineer</title>
+<meta name="description" content="Portfolio of Abanob Reda, aspiring Network and Cloud Engineer and Computer Science student at Nile University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F4F7FB; --surface:#FFFFFF; --ink:#0E2238; --muted:#485D73; --line:#D3DEEA;
+  --link:#1D5FB5; --accent-text:#1D5FB5; --focus:#1D5FB5; --chip:#E6EEF8;
+  --band:#0F2A4A; --band-2:#163A63; --band-line:#3E6A9E; --band-ink:#FFFFFF; --band-muted:#C3D2E4; --amber:#F59E0B; --amber-soft:#FBBF24;
+  --font:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#08172A; --surface:#10233B; --ink:#E8F0F8; --muted:#9CB1C6; --line:#21405F;
+    --link:#7FB6F0; --accent-text:#7FB6F0; --focus:#F59E0B; --chip:#173252;
+    --band:#0B2038; --band-2:#12304F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#08172A; --surface:#10233B; --ink:#E8F0F8; --muted:#9CB1C6; --line:#21405F;
+  --link:#7FB6F0; --accent-text:#7FB6F0; --focus:#F59E0B; --chip:#173252;
+  --band:#0B2038; --band-2:#12304F;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-0.02em}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.band{--focus:#F59E0B;background:var(--band);color:var(--band-ink)}
+
+/* header */
+header.top{position:sticky;top:0;z-index:10;padding-top:env(safe-area-inset-top,0px);background:var(--band);color:var(--band-ink);border-bottom:1px solid rgba(255,255,255,.12);--focus:#F59E0B}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:700;font-size:1.1rem;color:#fff;text-decoration:none;letter-spacing:-0.01em}
+nav{display:flex;gap:24px;font-size:.95rem;font-weight:500}
+nav a{color:var(--band-muted);text-decoration:none}
+nav a:hover{color:#fff}
+@media(max-width:640px){nav a:nth-child(n+4){display:none}nav{gap:18px}}
+
+/* hero */
+.hero{padding:96px 0 104px}
+.hero h1{font-size:clamp(3rem,9vw,6.25rem);font-weight:700;letter-spacing:-0.035em}
+.hero .role{margin-top:16px;font-weight:600;font-size:clamp(1.2rem,2.4vw,1.45rem);color:var(--amber-soft)}
+.hero .intro{margin-top:24px;max-width:40rem;color:var(--band-muted);font-size:1.05rem;line-height:1.65}
+.actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{cursor:pointer;font-family:inherit;display:inline-block;padding:13px 22px;border-radius:8px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid transparent;line-height:1.2}
+.btn.primary{background:var(--amber);color:#0F2A4A;border-color:var(--amber)}
+.btn.ghost{background:transparent;color:#fff;border-color:#7FA2CC}
+.btn:hover{filter:brightness(1.08)}
+.btn[hidden]{display:none}
+
+@media(max-width:860px){
+  .hero{padding:48px 0 60px}
+}
+
+/* sections */
+section.plain{padding:72px 0;border-top:1px solid var(--line)}
+section.plain:first-of-type{border-top:0}
+h2{font-size:clamp(1.8rem,3.6vw,2.4rem);margin-bottom:36px;font-weight:700}
+
+/* experience: hops */
+.hops{list-style:none;margin:0;padding:0 0 0 34px;position:relative}
+.hops::before{content:"";position:absolute;left:8px;top:14px;bottom:14px;width:2px;background:var(--line)}
+.hops>li{position:relative;padding-bottom:40px;max-width:46rem}
+.hops>li:last-child{padding-bottom:0}
+.hops>li::before{content:"";position:absolute;left:-34px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--link);box-shadow:0 0 0 4px var(--bg)}
+.hops>li.now::before{background:#F59E0B;border-color:#F59E0B}
+.hops h3{font-size:1.4rem;font-weight:600}
+.hops .where{margin-top:4px;color:var(--accent-text);font-weight:600}
+.hops .when{margin-top:2px;color:var(--muted);font-size:.95rem}
+.hops ul{margin:14px 0 0;padding-left:20px;color:var(--muted)}
+.hops ul li{padding:0 0 6px}
+
+/* projects */
+.projects{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.projects li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) 140px;gap:8px 32px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.projects h3{font-size:1.2rem;font-weight:600}
+.projects .tech{display:block;margin-top:6px;font-size:.92rem;font-weight:600;color:var(--accent-text)}
+.projects p{color:var(--muted)}
+.projects .date{color:var(--muted);font-size:.92rem;text-align:right}
+@media(max-width:760px){.projects li{grid-template-columns:1fr}.projects .date{text-align:left}}
+
+/* skills */
+.skills{margin:0;border-top:1px solid var(--line)}
+.skills>div{display:grid;grid-template-columns:150px 1fr;gap:12px 24px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+.skills dt{font-weight:600}
+.skills dd{margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);color:var(--ink);padding:5px 12px;border-radius:6px;font-size:.95rem;font-weight:500}
+.skills dd.text{display:block;color:var(--muted)}
+@media(max-width:640px){.skills>div{grid-template-columns:1fr;gap:10px}}
+
+/* background trio */
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.trio h3{font-size:1.2rem;margin-bottom:14px;font-weight:600}
+.trio p,.trio li{color:var(--muted)}
+.trio ul{list-style:none;margin:0;padding:0}
+.trio li{padding:4px 0}
+.trio strong{color:var(--ink);font-weight:600}
+@media(max-width:760px){.trio{grid-template-columns:1fr;gap:32px}}
+
+/* contact band */
+.contact{padding:80px 0 72px}
+.contact h2{color:#fff;font-size:clamp(2.2rem,5.5vw,3.6rem);max-width:15ch;margin-bottom:0;letter-spacing:-0.03em}
+.contact .lead{margin-top:16px;color:var(--band-muted);max-width:32rem}
+.contact .actions{margin-top:28px}
+.links{margin-top:32px;max-width:34rem;border-top:1px solid rgba(255,255,255,.18)}
+.links a,.links .row{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18);text-decoration:none;color:#fff;font-weight:500;flex-wrap:wrap}
+.links a:hover{color:var(--amber-soft)}
+.links .k{color:var(--band-muted);font-weight:400}
+footer.band{padding:24px 0 calc(32px + env(safe-area-inset-bottom,0px));color:var(--band-muted);font-size:.92rem;border-top:1px solid rgba(255,255,255,.12)}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Abanob Reda</a>
+    <nav aria-label="Main">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero band">
+  <div class="wrap">
+    <div>
+      <h1>Abanob Reda</h1>
+      <p class="role">Network and Cloud Engineer</p>
+      <p class="intro">Aspiring Network and Cloud Engineer with hands-on experience in networking, cloud computing, cloud security, and IT infrastructure through internships, technical training, and practical projects. Skilled in AWS, network infrastructure, network security, troubleshooting, and programming. Passionate about building, securing, and managing reliable IT and cloud environments while using programming skills to develop practical solutions. Seeking opportunities to apply my technical knowledge, contribute to real-world projects, and continue growing as a Network and Cloud Engineer.</p>
+      <div class="actions">
+        <a class="btn primary" href="Abanob_CV.pdf" download>Download CV</a>
+        <a class="btn ghost" href="#projects">See my projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="plain" id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <ol class="hops">
+      <li class="now">
+        <h3>Network Intern</h3>
+        <p class="where">Systics</p>
+        <p class="when">August 2026 to September 2026</p>
+        <ul>
+          <li>Worked hands-on with network switches.</li>
+          <li>Configured switches to establish and maintain basic connectivity.</li>
+          <li>Diagnosed and resolved basic connectivity issues through troubleshooting.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Network and Network Security Intern</h3>
+        <p class="where">Misr for Central Clearing, Depository and Registry (MCDR)</p>
+        <p class="when">August 2025 to September 2025</p>
+        <ul>
+          <li>Studied and applied core concepts of computer networks and network security.</li>
+          <li>Explored network infrastructure design and applied fundamental security concepts to protect systems.</li>
+          <li>Observed and assisted with how networks are managed and secured in a real organization.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="plain" id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <div><dt>Networking</dt><dd><span class="chip">TCP/IP</span><span class="chip">Switching</span><span class="chip">VLAN</span><span class="chip">Network infrastructure</span><span class="chip">Network security</span><span class="chip">Troubleshooting</span></dd></div>
+      <div><dt>Cloud</dt><dd><span class="chip">AWS</span><span class="chip">Cloud security</span></dd></div>
+      <div><dt>Programming</dt><dd><span class="chip">Python</span><span class="chip">C++</span><span class="chip">C</span><span class="chip">Java</span></dd></div>
+      <div><dt>Web</dt><dd><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></dd></div>
+      <div><dt>Tools</dt><dd><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">Arduino IDE</span></dd></div>
+      <div><dt>Working style</dt><dd class="text">Problem solving, teamwork, fast learner, communication, time management, critical thinking, adaptability</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="plain" id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li>
+        <div><h3>Supermarket Billing System</h3><span class="tech">Java, OOP</span></div>
+        <p>Object-oriented billing system with modules for inventory management, automated billing and receipt generation.</p>
+        <span class="date">Apr to May 2026</span>
+      </li>
+      <li>
+        <div><h3>Knapsack Problem</h3><span class="tech">Python, Analysis of Algorithms</span></div>
+        <p>Dynamic programming solution, with time and space complexity analysis used to find and apply performance optimizations.</p>
+        <span class="date">Apr to May 2026</span>
+      </li>
+      <li>
+        <div><h3>Binary to Hexadecimal Decoder</h3><span class="tech">Logic Design</span></div>
+        <p>Combinational circuit designed with Boolean algebra to decode binary input into hexadecimal output.</p>
+        <span class="date">Apr to May 2026</span>
+      </li>
+      <li>
+        <div><h3>Online Shopping System</h3><span class="tech">Data Structures and Algorithms</span></div>
+        <p>Shopping system built on structured data models for products and transactions, using searching and sorting to keep it fast.</p>
+        <span class="date">Nov to Dec 2025</span>
+      </li>
+      <li>
+        <div><h3>GPA Calculator</h3><span class="tech">C++</span></div>
+        <p>Object-oriented application that calculates and tracks GPA, saving its data in CSV files.</p>
+        <span class="date">Apr to May 2025</span>
+      </li>
+      <li>
+        <div><h3>Line Follower Robot</h3><span class="tech">Arduino</span></div>
+        <p>Autonomous robot designed, built and programmed to follow a line using infrared sensors.</p>
+        <span class="date">Apr to May 2025</span>
+      </li>
+      <li>
+        <div><h3>Restaurant Management Application</h3><span class="tech">Python</span></div>
+        <p>Application with an easy-to-use interface for handling menu items, orders and billing.</p>
+        <span class="date">Nov to Dec 2024</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="plain" id="background">
+  <div class="wrap trio">
+    <div>
+      <h3>Education</h3>
+      <p><strong>Nile University</strong><br>Faculty of Computer Science<br>Bachelor's degree, year 2<br>October 2024 to present<br>GPA 3.24</p>
+    </div>
+    <div>
+      <h3>Courses</h3>
+      <ul>
+        <li>Web Development Basics<br>Oct to Dec 2024</li>
+        <li style="padding-top:12px">Introduction to Network<br>Jul to Aug 2024</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Languages</h3>
+      <ul>
+        <li><strong>Arabic</strong> native</li>
+        <li><strong>English</strong> very good</li>
+        <li><strong>German</strong> A1, currently learning</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact band" id="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p class="lead">I'm open to internships and entry-level roles in networking, cloud, security and AI.</p>
+    <div class="actions"><a class="btn primary" href="Abanob_CV.pdf" download>Download CV</a></div>
+    <div class="links">
+      <a href="mailto:abanobr915@gmail.com"><span class="k">Email</span><span>abanobr915@gmail.com</span></a>
+      <a href="tel:+201022489178"><span class="k">Phone</span><span>01022489178</span></a>
+      <a href="https://www.linkedin.com/in/abanob-reda-90299b356/" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span>abanob-reda</span></a>
+      <span class="row"><span class="k">Location</span><span>El-Nozha, Cairo</span></span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="band">
+  <div class="wrap">Abanob Reda Eid Hanna</div>
+</footer>
+
+</body>
+</html>
